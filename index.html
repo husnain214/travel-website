@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Soul Travel</title>
+</head>
+<body>
+    <header class = "flex">
+        <nav class = "container flex">
+            <div class="nav-brand flex text-white">
+                <img 
+                    src = "./images/logo.svg" 
+                    alt = "logo"
+                    height = "30"
+                    width = "30"
+                >
+                
+                <p class = "uppercase fw-600">Soul Travel</span>
+            </div>
+
+            <ul class = "flex">
+                <li class = "uppercase fs-300"><a href="#" class = "text-white">Home</a></li>
+                <li class = "uppercase fs-300"><a href="#" class = "text-white">Register</a></li>
+                <li class = "uppercase fs-300"><a href="#" class = "text-white">Login</a></li>
+                <li class = "uppercase fs-300"><a href="#" class = "text-white">Contact Us</a></li>
+                <li class = "uppercase fs-300"><a href="#" class = "text-white">About Us</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero-section container flex">
+            <aside>
+                <p class = "text-white fs-400 letter-spacing-1">AWAY FROM MONOTONOUS LIFE</p>
+                <h1 class = " text-white fs-700 fw-600">MAGICAL TRAVEL</h1>
+                <p class = "text-white fs-300">If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each.</p>
+
+                <button class = "cta text-white fs-400 uppercase fw-600">Get Started</button>
+            </aside>
+
+            <form action="">
+                <h5 class = "fs-500 fw-600 center text-accent">FLIGHTS</h5>
+
+                <input 
+                    type = "text" 
+                    id = "from"
+                    name = "from"
+                    class = "fs-300"
+                    placeholder = "From"
+                >
+
+                <input 
+                    type = "text" 
+                    id = "to"
+                    name = "to"
+                    class = "fs-300"
+                    placeholder = "To"
+                >
+
+                <input 
+                    type = "text" 
+                    id = "start"
+                    name = "start"
+                    class = "fs-300"
+                    placeholder = "Start"
+                    onblur = "(this.type='text')"
+                    onfocus = "(this.type='date')"
+                >
+
+                <input 
+                    type = "text" 
+                    id = "end"
+                    name = "end"
+                    class = "fs-300"
+                    placeholder = "End"
+                    onblur = "(this.type='text')"
+                    onfocus = "(this.type='date')"
+                >
+
+                <input 
+                    type = "number" 
+                    id = "adults"
+                    name = "adults"
+                    class = "fs-300"
+                    placeholder = "Adults"
+                >
+
+                <input 
+                    type = "number" 
+                    id = "children"
+                    name = "children"
+                    class = "fs-300"
+                    placeholder = "Children"
+                >
+
+                <button class = "cta text-white fs-400 uppercase fw-600">Search Flights</button>
+            </form>
+        </section>
+    </header>
+
+    <main>
+        <section class = "popular-destinations">
+            <h2 class = "fs-600 text-accent uppercase fw-600 center">Our Popular Destinations</h2>
+
+            <div class="image-gallery grid">
+                <article class="image1">
+                    <div class="caption grid text-white fs-600 uppercase">France</div>
+                </article>
+                <article class="image2">
+                    <div class="caption grid text-white fs-600 uppercase">Turkey</div>
+                </article>
+                <article class="image3">
+                    <div class="caption grid text-white fs-600 uppercase">Switzerland</div>
+                </article>
+                <article class="image4">
+                    <div class="caption grid text-white fs-600 uppercase">India</div>
+                </article>
+                <article class="image5">
+                    <div class="caption grid text-white fs-600 uppercase">Paris</div>
+                </article>
+                <article class="image6">
+                    <div class="caption grid text-white fs-600 uppercase">Norway</div>
+                </article>
+            </div>
+        </section>
+
+        <section class = "packages"></section>
+        <section class = "issues"></section>
+        <section class = "testimonials"></section>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+        <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+
+        <div class="newsletter"></div>
+
+        <div class="instafeed"></div>
+    </footer>
+</body>
+</html>
