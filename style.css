@@ -187,9 +187,10 @@ form input {
     margin: 1em 0;
     padding: .4em .5em;
     border: 1px solid hsl( var(--clr-dark) / .2);
+    outline: none;
 }
 
-input:focus { outline: 1px solid hsl( var(--clr-light) ); }
+input:focus { border: 1px solid hsl( var(--clr-light) ); }
 
 form .cta:hover { 
     background-color: hsl( var(--clr-white));
@@ -214,9 +215,7 @@ form .cta:hover {
     min-height: 100vh;
 }
 
-h2 {
-    padding: .5em 0;
-}
+h2 { padding: .5em 0; }
 
 .image-gallery {
     grid-template-columns: repeat(4, 1fr);
@@ -287,7 +286,10 @@ h2 {
     transition: all 1s;
 }
 
-.packages-section { background-color: hsl( var(--clr-dark) / .05);}
+.packages-section { 
+    background-color: hsl( var(--clr-dark) / .03);
+    padding: 1em 0 2em 0;
+}
 
 .packages-section p { color: hsl( var(--clr-dark) / .8); }
 
@@ -295,9 +297,7 @@ h2 {
 
 h2 + p { padding-bottom: 2em; }
 
-.packages { 
-    grid-template-columns: 1fr 1fr 1fr;
-}
+.packages { grid-template-columns: 1fr 1fr 1fr; }
 
 .packages section { padding: .5em 1em; }
 
@@ -308,9 +308,7 @@ h4 { padding: .5em; }
     margin-bottom: 1em;
 }
 
-.row.flex {
-    justify-content: space-between;   
-}
+.row.flex { justify-content: space-between; }
 
 .row p:nth-child(2) {
     background-color: hsl( var(--clr-dark) / .05);
@@ -318,7 +316,7 @@ h4 { padding: .5em; }
     border: 1px solid hsl( var(--clr-dark) / .1);
 }
 
-.row~.row { margin-top: 1em; }
+.row ~ .row { margin-top: 1em; }
 
 
 
