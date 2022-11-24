@@ -55,6 +55,7 @@ body {
     color: hsl( var(--clr-dark) );
     background-color: hsl( var(--clr-white) );
     line-height: 1.5;
+    position: relative;
     min-height: 100vh;
 }
 
@@ -86,7 +87,6 @@ button { cursor: pointer;}
     padding-inline: 2em;
     margin-inline: auto;
     max-width: 70rem;
-    max-height: 970px;
 }
 
 .flex {
@@ -143,7 +143,7 @@ header {
         no-repeat; 
         background-size: cover;
     min-height: 100vh;
-    padding: 2em 0;
+    padding: 5em 0 2em 0;
     flex-direction: column;
     justify-content: space-around;
 }
@@ -153,6 +153,10 @@ nav.flex {
     justify-content: space-between; 
     align-items: center;
     background-color: hsl( var(--clr-white) / .1);
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    translate: -50% 0%;
 }
 
 nav li a { transition: 200ms; }
@@ -164,7 +168,6 @@ nav li:hover a { color: hsl( var(--clr-light) ); }
 .hero-section { justify-content: space-between; }
 
 .hero-section aside {
-    display: grid;
     align-content: center;
     justify-items: start;
     flex-basis: 60%;
@@ -207,50 +210,62 @@ form .cta:hover {
 }
 
 .popular-destinations {
-    padding: 1em;
+    padding: 2em 1em 4em 1em;
     min-height: 100vh;
 }
 
 h2 {
-    padding: 1em 0;
+    padding: .5em 0;
 }
 
 .image-gallery {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(8, 1fr);
     gap: 1em;
-    min-height: 50em;
+    min-height: 35em;
     margin-top: 1em;
 }
 
 .image1 { 
     grid-area: 4 / 1 / 7 / 2;  
-    background: url("./images/france.jpg") no-repeat center / cover;
+    background: url("./images/france.jpg") 
+                no-repeat 
+                center / cover;
 }
 
 .image2 { 
     grid-area: 3 / 2 / 6 / 3; 
-    background: url("./images/turkey.jpg") no-repeat center / cover;
+    background: url("./images/turkey.jpg") 
+                no-repeat 
+                center / cover;
 }
 
 .image3 { 
     grid-area: 1 / 3 / 5 / 4; 
-    background: url("./images/switzerland.jpg") no-repeat center / cover;
+    background: url("./images/switzerland.jpg") 
+                no-repeat 
+                center / cover;
 }
 
 .image4 { 
     grid-area: 3 / 4 / 6 / 5; 
-    background: url("./images/india.jpg") no-repeat center / cover;
+    background: url("./images/india.jpg") 
+                no-repeat 
+                center / cover;
 }
 
 .image5 { 
     grid-area: 6 / 2 / 9 / 3; 
-    background: url("./images/paris.jpg") no-repeat center / cover;
+    background: url("./images/paris.jpg") 
+                no-repeat 
+                center / cover;
 }
 
 .image6 { 
     grid-area: 5 / 3 / 8 / 4; 
-    background: url("./images/norway.jpg") no-repeat center / cover;
+    background: url("./images/norway.jpg") 
+                no-repeat 
+                center / cover;
 }
 
 .caption {
@@ -264,13 +279,46 @@ h2 {
 
 .image-gallery article:hover > .caption {
     height: 100%;
-    width: 100%;
+    width: 100%;     
 }
 
 .image-gallery article { 
     opacity: 0;
     transition: all 1s;
 }
+
+.packages-section { background-color: hsl( var(--clr-dark) / .05);}
+
+.packages-section p { color: hsl( var(--clr-dark) / .8); }
+
+.packages-section h2 { padding-bottom: .5em; }
+
+h2 + p { padding-bottom: 2em; }
+
+.packages { 
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.packages section { padding: .5em 1em; }
+
+h4 { padding: .5em; }
+
+.package-head { 
+    border-bottom: 1px solid hsl( var(--clr-light) );
+    margin-bottom: 1em;
+}
+
+.row.flex {
+    justify-content: space-between;   
+}
+
+.row p:nth-child(2) {
+    background-color: hsl( var(--clr-dark) / .05);
+    padding: .5em;
+    border: 1px solid hsl( var(--clr-dark) / .1);
+}
+
+.row~.row { margin-top: 1em; }
 
 
 
