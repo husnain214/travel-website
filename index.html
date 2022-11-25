@@ -13,7 +13,7 @@
     <title>Soul Travel</title>
 </head>
 <body>
-    <header class = "flex">
+    <header class = "flex" data-type="observer">
         <nav class = "container flex">
             <div class="nav-brand flex text-white">
                 <img 
@@ -45,7 +45,7 @@
             </aside>
 
             <form action="">
-                <h5 class = "fs-500 fw-600 center text-accent">FLIGHTS</h5>
+                <h5 class = "fs-500 fw-600 center text-accent-1">FLIGHTS</h5>
 
                 <input 
                     type = "text" 
@@ -105,12 +105,13 @@
     </header>
 
     <main>
+        <div id="navObs" data-type = "observer"></div>
         <section class = "popular-destinations container">
-            <h2 class = "fs-600 text-accent uppercase fw-600 center">Our Popular Destinations</h2>
+            <h2 class = "fs-600 text-accent-1 uppercase fw-600 center">Our Popular Destinations</h2>
 
             <div class="image-gallery grid">
                 <article class="image1">
-                    <div class="caption grid text-white fs-600 uppercase">France</div>
+                    <div class="caption grid text-white fs-600 upp ercase">France</div>
                 </article>
                 <article class="image2">
                     <div class="caption grid text-white fs-600 uppercase">Turkey</div>
@@ -119,7 +120,7 @@
                     <div class="caption grid text-white fs-600 uppercase">Switzerland</div>
                 </article>
                 <article class="image4">
-                    <div class="caption grid text-white fs-600 uppercase">India</div>
+                    <div class="caption grid text-white fs-600 uppercase">New Zealand</div>
                 </article>
                 <article class="image5">
                     <div class="caption grid text-white fs-600 uppercase">Paris</div>
@@ -131,8 +132,8 @@
         </section>
 
         <section class = "packages-section bg-dark">
-            <div class="container">
-                <h2 class = "fs-600 text-accent uppercase fw-600 center">We Provide Affordable Prices</h2>
+            <div class="container grid">
+                <h2 class = "fs-600 text-accent-1 uppercase fw-600 center">We Provide Affordable Prices</h2>
                 <p class = "text-dark fs-300">If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each.</p>
     
                 <div class="packages grid">
@@ -243,23 +244,100 @@
         <section class = "testimonials"></section> -->
     </main>
 
-    <!-- <footer>
-        <ul>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-        </ul>
-        <ul>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-        </ul>
-
-        <div class="newsletter"></div>
-
-        <div class="instafeed"></div>
-    </footer> -->
+    <footer class = "bg-accent-2">
+        <section class="container grid">
+            <nav class="secondary-nav">
+                <h5 class = "uppercase text-white fw-400 fs-500">Navigation Links</h5>
+                
+                <div class = "grid">
+                    <p class = "fs-300 fw-300"><a href="#" class = "text-white">Home</a></p>
+                    <p class = "fs-300 fw-300"><a href="#" class = "text-white">Register</a></p>
+                    <p class = "fs-300 fw-300"><a href="#" class = "text-white">Login</a></p>
+                    <p class = "fs-300 fw-300"><a href="#" class = "text-white">Contact Us</a></p>
+                    <p class = "fs-300 fw-300"><a href="#" class = "text-white">About Us</a></p>
+                </div>
+            </nav>
+    
+            <div class="newsletter">
+                <h5 class = "uppercase text-white fw-400 fs-500">Newsletter</h5>
+    
+                <p class = "text-white fs-300 fw-300">For business professionals caught between high OEM price and mediocre print and graphic output.</p>
+    
+                <div class="newsletter-field flex">
+                    <input 
+                        type = "email" 
+                        name = "email" 
+                        id = "email"
+                        class = "fs-400 fw-300 text-accent-2"
+                        placeholder = "Email Address"
+                    >
+    
+                    <button class = "grid">
+                        <img 
+                            src = "./images/paper-plane.svg" 
+                            alt = "send button"
+                            height = "30"
+                            width = "30"
+                        >
+                    </button>
+                </div>
+            </div>
+    
+            <div class="instafeed">
+                <h5 class = "uppercase text-white fw-400 fs-500">Instafeed</h5>
+    
+                <div class="insta-grid grid">
+                    <img 
+                        src = "./images/insta-2.jpg" 
+                        alt = "insta post"
+                        height = "50"
+                        width = "50"
+                    >
+                    <img 
+                        src = "./images/insta-1.jpg" 
+                        alt = "insta post"
+                        height = "50"
+                        width = "50"
+                    >
+                    <img 
+                        src = "./images/insta-3.jpg" 
+                        alt = "insta post"
+                        height = "50"
+                        width = "50"
+                    >
+                    <img 
+                        src = "./images/insta-4.jpg" 
+                        alt = "insta post"
+                        height = "50"
+                        width = "50"
+                    >
+                    <img 
+                        src = "./images/insta-5.jpg" 
+                        alt = "insta post"
+                        height = "50"
+                        width = "50"
+                    >
+                    <img 
+                        src = "./images/insta-6.jpg" 
+                        alt = "insta post"
+                        height = "50"
+                        width = "50"
+                    >
+                    <img 
+                        src = "./images/insta-7.jpg" 
+                        alt = "insta post"
+                        height = "50"
+                        width = "50"
+                    >
+                    <img 
+                        src = "./images/insta-8.jpg" 
+                        alt = "insta post"
+                        height = "50"
+                        width = "50"
+                    >
+                </div>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>

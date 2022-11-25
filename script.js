@@ -1,22 +1,40 @@
-const images = Array.from(document.querySelectorAll('.image-gallery article'))
-
+const images = document.querySelectorAll('.image-gallery article')
+const entries = document.querySelectorAll(`*[data-type="observer"]`)
+const navBar = document.querySelector("nav")
 const indexes = [4, 5, 2, 0, 3, 1]
 
-const showImage = i =>  new Promise((resolve, reject) => {
-                            setTimeout(() => {
-                                images[indexes[i]].style.opacity = "1"
+const options = { threshold: 1 }
 
-                                const error = 0
-                            
-                                if(!error) resolve("1")
-                                else reject(error)
-                            }, 800)
-                        })
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return
+       
+        if(entry.target.id === "navObs") {
+            navBar.classList.toggle("dark-nav") 
+            showAll()
+        }    
+        else if(entry.target.tagName.toLowerCase() === "header") navBar.classList.remove("dark-nav")   
+    })
+}, options)
 
-const showAll = async () => {
-    for( let i = 0; i < images.length; i++ ) {
-        await showImage(indexes[i])
-    }
+entries.forEach(entry => observer.observe(entry))
+
+function showImage(i) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            images[indexes[i]].style.opacity = "1"
+
+            const error = 0
+        
+            if(!error) resolve("1")
+            else reject(error)
+        }, 400)
+    })
 }
 
-showAll()
+async function showAll() {
+    for( let i = 0; i < images.length; i++ ) 
+        await showImage(indexes[i])
+}
+
+

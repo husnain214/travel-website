@@ -5,7 +5,8 @@
 :root {
     /* colors */
     --clr-dark: 0 0% 13%;
-    --clr-light: 44 100% 49%;
+    --clr-light-1: 44 100% 49%;
+    --clr-light-2: 228 76% 7%;
     --clr-white: 0 0% 100%;
     
     /* font-sizes */
@@ -102,11 +103,13 @@ button { cursor: pointer;}
 /* colors */
 
 .bg-dark { background-color: hsl( var(--clr-dark) );}
-.bg-accent { background-color: hsl( var(--clr-light) );}
+.bg-accent-1 { background-color: hsl( var(--clr-light-1) );}
+.bg-accent-2 { background-color: hsl( var(--clr-light-2) );}
 .bg-white { background-color: hsl( var(--clr-white) );}
 
 .text-dark { color: hsl( var(--clr-dark) );}
-.text-accent { color: hsl( var(--clr-light) );}
+.text-accent-1 { color: hsl( var(--clr-light-1) );}
+.text-accent-2 { color: hsl( var(--clr-light-2) ); }
 .text-white { color: hsl( var(--clr-white) );}
 
 .letter-spacing-1 { letter-spacing: 4.75px; } 
@@ -157,11 +160,22 @@ nav.flex {
     top: 20px;
     left: 50%;
     translate: -50% 0%;
+    z-index: 1000;
+    transition: all 200ms;
+}
+
+/* Trick from https://www.youtube.com/shorts/81pnuZFarRw */
+
+.dark-nav.container {
+    top: 0;
+    background-color: hsl( var(--clr-dark) / .8);
+    box-shadow: 0 0 0 100vmax hsl( var(--clr-dark) / .8);
+    clip-path: inset(0 -100vmax);
 }
 
 nav li a { transition: 200ms; }
 
-nav li:hover a { color: hsl( var(--clr-light) ); }
+nav li:hover a { color: hsl( var(--clr-light-1) ); }
 
 .nav-brand { flex: 1; }
 
@@ -190,16 +204,16 @@ form input {
     outline: none;
 }
 
-input:focus { border: 1px solid hsl( var(--clr-light) ); }
+input:focus { border: 1px solid hsl( var(--clr-light-1) ); }
 
 form .cta:hover { 
     background-color: hsl( var(--clr-white));
-    color: hsl( var(--clr-light) );
+    color: hsl( var(--clr-light-1) );
 } 
 
 .cta { 
     margin-top: 1.5em;
-    background-color: hsl( var(--clr-light) );
+    background-color: hsl( var(--clr-light-1) );
     padding: .4em .9em;
     border: 1px solid transparent;
     transition: all 100ms;
@@ -207,7 +221,7 @@ form .cta:hover {
 
 .cta:hover {
     background-color: transparent;
-    border: 1px solid hsl( var(--clr-light) );
+    border: 1px solid hsl( var(--clr-light-1) );
 }
 
 .popular-destinations {
@@ -217,12 +231,31 @@ form .cta:hover {
 
 h2 { padding: .5em 0; }
 
+
+#navObs,
+#galleryObs {
+    height: 20px; 
+    width: 20px;
+    background-color: red;
+    position: absolute;
+    opacity: 0;
+}
+
+#navObs {
+    right: 20%;
+}
+
+#galleryObs {
+    right: 40%;
+}
+
 .image-gallery {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(8, 1fr);
     gap: 1em;
     min-height: 35em;
     margin-top: 1em;
+    position: relative;
 }
 
 .image1 { 
@@ -248,7 +281,7 @@ h2 { padding: .5em 0; }
 
 .image4 { 
     grid-area: 3 / 4 / 6 / 5; 
-    background: url("./images/india.jpg") 
+    background: url("./images/new_zealand.jpg") 
                 no-repeat 
                 center / cover;
 }
@@ -270,7 +303,7 @@ h2 { padding: .5em 0; }
 .caption {
     height: 0%;
     width: 0%;
-    background-color: hsl( var(--clr-light) );
+    background-color: hsl( var(--clr-light-1) );
     place-content: center;
     overflow: hidden;
     transition: all 200ms;
@@ -279,6 +312,7 @@ h2 { padding: .5em 0; }
 .image-gallery article:hover > .caption {
     height: 100%;
     width: 100%;     
+    padding: 1em;
 }
 
 .image-gallery article { 
@@ -289,6 +323,7 @@ h2 { padding: .5em 0; }
 .packages-section { 
     background-color: hsl( var(--clr-dark) / .03);
     padding: 1em 0 2em 0;
+    min-height: 100vh;
 }
 
 .packages-section p { color: hsl( var(--clr-dark) / .8); }
@@ -299,12 +334,12 @@ h2 + p { padding-bottom: 2em; }
 
 .packages { grid-template-columns: 1fr 1fr 1fr; }
 
-.packages section { padding: .5em 1em; }
+.packages section { padding: .5em 2em 2em 2em; }
 
 h4 { padding: .5em; }
 
 .package-head { 
-    border-bottom: 1px solid hsl( var(--clr-light) );
+    border-bottom: 1px solid hsl( var(--clr-light-1) );
     margin-bottom: 1em;
 }
 
@@ -318,5 +353,51 @@ h4 { padding: .5em; }
 
 .row ~ .row { margin-top: 1em; }
 
+footer {
+    padding: 2em;
+}
 
+footer .container.grid { 
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+h5 ~ .grid > p a,
+.newsletter p { color: hsl( var(--clr-white) / .7); }
+
+h5,
+h5 + p { padding-bottom: 1em; }
+
+.secondary-nav .grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: start;
+}
+
+.secondary-nav .grid p:where(:focus, :hover) a { 
+    transition: all 200ms;color: hsl( var(--clr-light-1) ); 
+}
+
+.newsletter-field.flex {
+    align-items: stretch;
+    --gap: 0;
+}
+
+.newsletter-field input {
+    padding: .5em .5em;
+    border: 2px solid hsl( var(--clr-dark) / .2);
+    outline: none;
+}
+
+.newsletter-field input:focus { border: 2px solid hsl( var(--clr-light-1) ); }
+
+.newsletter-field button { 
+    background-color: transparent;
+    border: 2px solid hsl( var(--clr-light-1) );
+    padding-inline: .4em;
+}
+
+.newsletter-field img { rotate: 320deg; }
+
+.insta-grid.grid {
+    grid-template-columns: repeat(4, 1fr);
+}
 
