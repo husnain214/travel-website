@@ -1,6 +1,7 @@
 const images = document.querySelectorAll('.image-gallery article')
 const entries = document.querySelectorAll(`*[data-type="observer"]`)
 const navBar = document.querySelector("nav")
+const form = document.querySelector("form")
 const indexes = [4, 5, 2, 0, 3, 1]
 
 const options = { threshold: 1 }

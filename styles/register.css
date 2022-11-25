@@ -1,0 +1,49 @@
+header {
+    background: 
+        linear-gradient(hsl( var(--clr-dark) / .5), 
+                        hsl( var(--clr-dark) / .5)),
+        url("../images/hero-bg.jpg")
+        center
+        no-repeat; 
+    min-height: 50vh;
+    padding-bottom: 1em;
+    place-content: center;
+}
+
+main { 
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+form {
+    width: min(40em, 90%);
+}
+
+section {
+    position: relative;
+}
+
+section + section { margin-top: 2em; }
+
+input:is(:focus, :valid) ~ label {
+    translate: 2% -100%;
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    font-size: smaller;
+}
+
+label {
+    position: absolute;
+    top: 20%;
+    bottom: 0;
+    left: 3%;
+    right: 0;
+    transition: all 200ms;
+}
+
+.register-btn {
+   width: 100%;
+}
+

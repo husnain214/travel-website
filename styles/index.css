@@ -15,7 +15,7 @@
     --fs-700: 3.5rem;
     --fs-600: 2rem;
     --fs-500: 1.75rem;
-    --fs-400: 1.125rem;
+    --fs-400: 1.125rem; 
     --fs-300: 1rem;
     --fs-200: 0.875rem;
 
@@ -141,7 +141,7 @@ header {
     background: 
         linear-gradient(hsl( var(--clr-dark) / .5), 
                         hsl( var(--clr-dark) / .5)),
-        url("./images/hero-bg.jpg")
+        url("../images/hero-bg.jpg")
         center
         no-repeat; 
         background-size: cover;
@@ -260,42 +260,42 @@ h2 { padding: .5em 0; }
 
 .image1 { 
     grid-area: 4 / 1 / 7 / 2;  
-    background: url("./images/france.jpg") 
+    background: url("../images/france.jpg") 
                 no-repeat 
                 center / cover;
 }
 
 .image2 { 
     grid-area: 3 / 2 / 6 / 3; 
-    background: url("./images/turkey.jpg") 
+    background: url("../images/turkey.jpg") 
                 no-repeat 
                 center / cover;
 }
 
 .image3 { 
     grid-area: 1 / 3 / 5 / 4; 
-    background: url("./images/switzerland.jpg") 
+    background: url("../images/switzerland.jpg") 
                 no-repeat 
                 center / cover;
 }
 
 .image4 { 
     grid-area: 3 / 4 / 6 / 5; 
-    background: url("./images/new_zealand.jpg") 
+    background: url("../images/new_zealand.jpg") 
                 no-repeat 
                 center / cover;
 }
 
 .image5 { 
     grid-area: 6 / 2 / 9 / 3; 
-    background: url("./images/paris.jpg") 
+    background: url("../images/paris.jpg") 
                 no-repeat 
                 center / cover;
 }
 
 .image6 { 
     grid-area: 5 / 3 / 8 / 4; 
-    background: url("./images/norway.jpg") 
+    background: url("../images/norway.jpg") 
                 no-repeat 
                 center / cover;
 }
