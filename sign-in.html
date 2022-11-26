@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="./css/sign-in.css">
+    <script src="./js/sign-in.js" defer></script>
+    <title>Register</title>
+</head>
+<body>
+    <header class = "grid" data-type="observer">
+        <nav class = "container flex">
+            <a href="./index.html">
+                <div class="nav-brand flex text-white">
+                    <img 
+                        src = "./images/logo.svg" 
+                        alt = "logo"
+                        height = "30"
+                        width = "30"
+                    >
+                    
+                    <p class = "uppercase fw-600">Soul Travel</span>
+                </div>
+            </a>
+
+            <ul class = "flex">
+                <li class = "uppercase fs-300">
+                    <a href="./index.html" class = "text-white">Home</a>
+                </li>
+                
+                <li class = "uppercase fs-300">
+                    <a href="./register.html" class = "text-white">Register</a>
+                </li>
+
+                <li class = "uppercase fs-300">
+                    <a href="./sign-in.html" class = "text-white">Sign in</a>
+                </li>
+
+                <li class = "uppercase fs-300">
+                    <a href="./contact.html" class = "text-white">Contact Us</a>
+                </li>
+
+                <li class = "uppercase fs-300">
+                    <a href="./About.html" class = "text-white">About Us</a>
+                </li>
+            </ul>
+        </nav>
+
+        <h1 class = "fs-700 fw-600 text-accent-1 center uppercase">Sign in</h1>
+    </header>
+
+    <main class = "flex" data-type = "observer">
+        <form action="" method="post">
+            <section>
+                <input 
+                    type = "text"
+                    name = "email"
+                    id = "email"
+                    
+                    required
+                >
+                <label for="email" class = "text-accent-1 fw-400 ">E-mail</label>
+            </section>
+
+            <section>
+                <input 
+                    type = "password"
+                    name = "password"
+                    id = "password"
+                    required
+                >
+                <label for="password" class = "text-accent-1 fw-400 ">Password</label>
+            </section>
+
+            <button type="submit" class = "register-btn cta text-white fw-400">Sign in</button>
+        </form>
+    </main>
+
+    <footer class = "bg-accent-2" data-type="observer">
+        <section class="container grid">
+            <nav class="secondary-nav">
+                <h5 class = "uppercase text-white fw-400 fs-500">Navigation Links</h5>
+                
+                <div class = "grid">
+                    <p class = "fs-300 fw-300"><a href="./index.html" class = "text-white">Home</a></p>
+                    <p class = "fs-300 fw-300"><a href="./register.html" class = "text-white">Register</a></p>
+                    <p class = "fs-300 fw-300"><a href="./sign-in.html" class = "text-white">Sign in</a></p>
+                    <p class = "fs-300 fw-300"><a href="./contact.html" class = "text-white">Contact Us</a></p>
+                    <p class = "fs-300 fw-300"><a href="./About.html" class = "text-white">About Us</a></p>
+                </div>
+            </nav>
+    
+            <div class="newsletter">
+                <h5 class = "uppercase text-white fw-400 fs-500">Newsletter</h5>
+    
+                <p class = "text-white fs-300 fw-300">For business professionals caught between high OEM price and mediocre print and graphic output.</p>
+    
+                <div class="newsletter-field flex">
+                    <input 
+                        type = "email" 
+                        name = "email" 
+                        id = "email"
+                        class = "fs-400 fw-300 text-accent-2"
+                        placeholder = "Email Address"
+                    >
+    
+                    <button class = "grid">
+                        <img 
+                            src = "./images/paper-plane.svg" 
+                            alt = "send button"
+                            height = "30"
+                            width = "30"
+                        >
+                    </button>
+                </div>
+            </div>
+    
+            <div class="instafeed">
+                <h5 class = "uppercase text-white fw-400 fs-500">Instafeed</h5>
+    
+                <div class="insta-grid grid">
+                    <img 
+                        src = "./images/insta-2.jpg" 
+                        alt = "insta post"
+                        height = "50"
+                        width = "50"
+                    >
+                    <img 
+                        src = "./images/insta-1.jpg" 
+                        alt = "insta post"
+                        height = "50"
+                        width = "50"
+                    >
+                    <img 
+                        src = "./images/insta-3.jpg" 
+                        alt = "insta post"
+                        height = "50"
+                        width = "50"
+                    >
+                    <img 
+                        src = "./images/insta-4.jpg" 
+                        alt = "insta post"
+                        height = "50"
+                        width = "50"
+                    >
+                    <img 
+                        src = "./images/insta-5.jpg" 
+                        alt = "insta post"
+                        height = "50"
+                        width = "50"
+                    >
+                    <img 
+                        src = "./images/insta-6.jpg" 
+                        alt = "insta post"
+                        height = "50"
+                        width = "50"
+                    >
+                    <img 
+                        src = "./images/insta-7.jpg" 
+                        alt = "insta post"
+                        height = "50"
+                        width = "50"
+                    >
+                    <img 
+                        src = "./images/insta-8.jpg" 
+                        alt = "insta post"
+                        height = "50"
+                        width = "50"
+                    >
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+header {
+    background-color: aqua;
+    height: 350px;
+    background: #878584;
+    background-image: linear-gradient(rgba(101, 93, 101, 0.1), rgba(77, 74, 74, 0.7)),url("../images/pietro-de-grandi-T7K4aEPoGGk-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    position: relative;
+}
+header .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+}
+header .hero-text h1 {
+    font-size: 2.2rem;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+}
+header .hero-text .arrow {
+    color: white;
+    margin: 0 10px;
+    text-shadow: 2px 2px 8px black;
+}
+header .hero-text a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+}
+
+.container .row .col_01_text {
+    font-weight: bold;
+}
+.container .row .col_01_text span {
+    font-weight: lighter;
+    color: gray;
+}
+.contact-btn {
+    background-color: rgb(53, 53, 234);
+    padding: 10px 50px;
+}
+.contact-container {
+    margin-top: 90px;
+    font-weight: bold;
+}
+.contact-icon {
+   font-size: 24px;
+}
